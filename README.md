@@ -13,6 +13,8 @@ Pradip Warkhade is a passionate and dedicated individual pursuing a Bachelor's d
 - **About Me:** Learn more about Pradip Warkhade's background, skills, and interests.
 - **Projects:** Explore the projects Pradip has worked on, including descriptions, technologies used, and links to live demos or GitHub repositories.
 - **Contact:** Reach out to Pradip Warkhade via email or through social media platforms.
+- **Education** 
+- **Skills**
 
 ## Technologies Used
 
