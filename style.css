@@ -53,8 +53,7 @@ section{
 }
 
 header{
-    
-    box-shadow: 0 5rem 5rem rgba(123, 122, 122, 0.3);
+    box-shadow: 0 5rem 5rem rgba(11, 11, 11, 0.4);
     backdrop-filter: blur(.4rem);
     position: fixed;
     height: 100%;
