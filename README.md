@@ -29,6 +29,6 @@ Pradip Warkhade is a passionate and dedicated individual pursuing a Bachelor's d
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/pradipwarkhade/portfolio-website.git
+   git clone https://github.com/pradipwarkhade/portfolio_pradip292.git
 
 Feel free to customize it further according to Pradip Warkhade's preferences and specific project details.
