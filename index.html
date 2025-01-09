@@ -625,14 +625,14 @@
                             <textarea name="message" id="" cols="30" rows="10" id="message" placeholder="Write your Message"
                                 class="contact__form-input "></textarea>
                         </div>
-                        <button type="submit" onclick="sendMail(event);" class="button">
+                        <button type="submit" onclick="sendMail();" class="button">
                             Send Message
                         </button>                        
                     </form>
                     <script>
                 
-                        function sendMail(event) {
-                                event.preventDefault(); // Prevent form submission and page reload
+                        function sendMail() {
+                                //event.preventDefault(); // Prevent form submission and page reload
                                 (function () {
                                     emailjs.init("dpqz6N77kqk8R0-9h"); // Account Public Key 
                                 })();
