@@ -27,6 +27,28 @@
 
     <title>Pradip's Portfolio</title>
 </head>
+<script>
+    function sendMail() {
+            (function () {
+                emailjs.init("dpqz6N77kqk8R0-9h"); // Account Public Key 
+            })();
+            var params = {
+                sendername: document.querySelector("#sendername").value, 
+                //to: document.querySelector("#to").value,
+                //phone: document.querySelector("#phone").value,
+                //subject: document.querySelector("#subject").value,
+                replyto: document.querySelector("#reply_to").value,
+                message: document.querySelector("#message").value,};
+                var serviceID = "service_zv9t7mi"; // Email Service ID
+                var templateID = "template_wry0v7l"; // Email Template ID
+                
+                emailjs.send(serviceID, templateID, params)
+                    .then(res =>{
+                        alert("Email Send Successfully !")
+                    })
+                    .catch("Error !");
+            }
+</script>
 
 <!-- <body> -->
     <!-- =============== HEADER =============== -->
@@ -614,7 +636,7 @@
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Mail</label>
-                            <input type="text" placeholder="Enter email" id="reply_to" class="contact__form-input">
+                            <input type="email" placeholder="Enter email" id="reply_to" class="contact__form-input">
                         </div>
 
                         <div class="contact__form-div contact__form-area">
