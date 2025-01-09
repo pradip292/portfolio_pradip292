@@ -631,30 +631,27 @@
                         </button>
                     </form>
                     <script>
-                        function sendMail(event) {
-                        
-                        (function () {
-                            emailjs.init("dpqz6N77kqk8R0-9h"); // Account Public Key 
-                        })();
-
-                        var params = {
-                            sendername: document.querySelector("#sendername").value, 
-                            replyto: document.querySelector("#reply_to").value,
-                            message: document.querySelector("#message").value,
-                        };
-                        
-                        var serviceID = "service_zv9t7mi"; // Email Service ID
-                        var templateID = "template_wry0v7l"; // Email Template ID
-                        
-                        emailjs.send(serviceID, templateID, params)
-                            .then(res => {
-                                alert("Email Sent Successfully!");
-                            })
-                            .catch(err => {
-                                alert("Error sending email!");
-                                console.error(err);
-                            });
-                    }
+                
+                        function sendMail() {
+                                (function () {
+                                    emailjs.init("dpqz6N77kqk8R0-9h"); // Account Public Key 
+                                })();
+                                var params = {
+                                    sendername: document.querySelector("#sendername").value, 
+                                    //to: document.querySelector("#to").value,
+                                    phone: document.querySelector("#phone").value,
+                                    subject: document.querySelector("#subject").value,
+                                    replyto: document.querySelector("#reply_to").value,
+                                    message: document.querySelector("#message").value,};
+                                    var serviceID = "service_zv9t7mi"; // Email Service ID
+                                    var templateID = "template_wry0v7l"; // Email Template ID
+                                    
+                                    emailjs.send(serviceID, templateID, params)
+                                        .then(res =>{
+                                            alert("Email Send Successfully !")
+                                        })
+                                        .catch("Error !");
+                                }
                     </script>
                 </div>
         </section>
