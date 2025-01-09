@@ -5,6 +5,6 @@
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/pradipwarkhade/portfolio_pradip292.git
+   git clone https://github.com/pradip292/portfolio_pradip292.git
 
 
