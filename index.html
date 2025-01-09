@@ -3,260 +3,723 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pradip Warkhade</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+    <!--=============== FAVICON ===============-->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo-removebg.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo-removebg.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo-removebg.png">
+    <link rel="manifest" href="assets/img/logo-removebg.png">
+    <link rel="mask-icon" href="assets/img/logo-removebg.png" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/img/logo-removebg.png">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#a789d4">
+
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Pradip's Portfolio</title>
 </head>
 
-<body>
-    <header>
-        <div class="user">
-            <img src="pradip.jpg" alt="">
-            <h1 class="name">Pradip Warkhade</h1>
-            <p class="post">IT Engineering Student</p>
-        </div>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Education</a></li>
-<!--                 <li><a href="#skills">Skills</a></li> -->
-<!--                 <li><a href="#projects">Projects</a></li> -->
-                <li><a href="#contacts">Contacts</a></li>
-            </ul>
+<!-- <body> -->
+    <!-- =============== HEADER =============== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Pradip Warkhade</a>
+
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item ">
+                        <a href="#home" class="nav__link">
+                            <i class='bx bx-home'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item ">
+                        <a href="#about" class="nav__link">
+                            <i class='bx bx-user'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class='bx bx-book'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#work" class="nav__link">
+                            <i class='bx bx-briefcase-alt-2'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class='bx bx-message-square-dots'></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--=============== theme change button ===============-->
+            <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
+
         </nav>
     </header>
-    <div id="menu" class="fas fa-bars"></div>
-    <!-- header section ends -->
 
-    <!-- home section starts -->
-    <section class="home" id="home">
-        <h3>HI MYSELF!</h3>
-        <h2>PRADIP WARKHADE</h2>
-        <h3 class="post">i am <span class="typing-text"></span></h3>
-        <p>I am a B.Tech IT Engineering Student Currently in 4th Year pursuing my degree from Sanjivani College of
-            Engineering, Kopargaon.</p>
-        <a class="know" href="#about"><button class="btn">Know Me<i class="fas fa-user"></i></button></a>
+    <!--=============== MAIN ===============-->
+    <main class="main">
+        <!--=============== HOME ===============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__greeting">Hello, I'm</span>
+                    <h1 class="home__name">Pradip Warkhade</h1>
+                    <h3 class="home__education">Aspiring Software Developer</h3>
+
+                    <div class="home__button">
+                        <a download="https://www.linkedin.com/in/pradip292/" href="" class="button button--ghost">
+                            Download CV
+                        </a>
+
+                        <a href="#about" class="button">About</a>
+                    </div>
+                </div>
+
+                <div class="home__handle">
+                    <!-- profile photo -->
+                    <img src="assets/img/profile.jpg" alt="" class="home__img" style="height: 100%; width: auto;">
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/pradip292" target="_blank" class="home__social-link">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://github.com/pradip292/" target="_blank" class="home__social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://x.com/PradipWarkhade7" target="_blank" class="home__social-link">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                </div>
+
+                <a href="#about" class="home__scroll">
+                    <i class='bx bx-mouse home__scroll-icon'></i>
+                    <span class="home__scroll-name">Scroll Down</span>
+                </a>
+            </div>
+        </section>
+
+        <!--=============== ABOUT ===============-->
+        <section class="about section" id="about">
+            <span class="section__subtitle">My Intro</span>
+            <h2 class="section__title">About Me</h2>
+
+            <div class="about__container container grid">
+                <!-- profile photo 2 -->
+                <img src="assets/img/profile3.jpg" alt="" class="about__img">
+
+                <div class="about__data">
+                    <div class="about__info">
+                        <div class="about__box">
+                            <i class='bx bx-award about__icon'></i>
+                            <h3 class="about__title">Experience</h3>
+                            <span class="about__subtitle">1 year ( on project)</span>
+                        </div>
+                        <div class="about__box">
+                            <i class='bx bx-briefcase-alt about__icon'></i>
+                            <h3 class="about__title">Completed</h3>
+                            <span class="about__subtitle">10+ Projects</span>
+                        </div>
+                        <div class="about__box">
+                            <i class='bx bx-message-square-dots about__icon'></i>
+                            <h3 class="about__title">Hackathons</h3>
+                            <span class="about__subtitle">7+</span>
+                        </div>
+                    </div>
+
+                    <p class="about__description">
+                        "Remember, "Guided missiles are more effective than unplanned nuclear attacks!"
+                        <br>
+                        <br>    
+                        I am an IT engineering undergraduate at Sanjivani College of Engineering, seeking an opportunity to contribute and grow in the tech industry. Skilled in C++, Java, Python, and frameworks like ReactJS, Laravel, and Spring Boot, I am also advancing my expertise in Data Structures and Algorithms (DSA). With experience in hackathons, I value teamwork and innovation. Beyond tech, my passion for football reflects my dedication and never-give-up attitude. I aim to leverage my skills and creativity to make a meaningful impact in the IT field."
+                    </p>
+
+                    <a href="https://www.linkedin.com/in/pradip292/" class="button about__button-contact">Contact Me</a>
+                </div>
+            </div>
+        </section> <br>
+
+        <span class="section__subtitle" id="skills">My Abilities</span>
+            <h2 class="section__title">My Skills</h2>
+        <!--=============== SKILLS ===============-->
+        <section class="skills__container container grid" >
+            
+            <!-- Programming Languages -->
+            <div class="skills__content">
+                <h3 class="skills__title">Programming Languages</h3>
         
-        <div class="share">
-            <!-- <a href="#" class="fab fa-facebook-f"></a> -->
-            <a href="https://twitter.com/PradipWarkhade7" target="_blank" class="fab fa-twitter"></a>
-            <a href="https://www.instagram.com/pradip_warkhade_patil/" target="_blank" class="fab fa-instagram"></a>
-            <a href="https://www.linkedin.com/in/pradip292?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BYirZwhNYTpyLZlx1M98hSQ%3D%3D"
-                target="_blank" class="fab fa-linkedin"></a>
-            <a href="https://github.com/pradip292" target="_blank" class="fab fa-github"></a>
-            <a href="https://www.linkedin.com/in/pradip292/"
-                class="fas fa-download"></a>
-
-        </div>
-    </section>
-    <!-- home section end -->
-
-    <!-- about section start -->
-    <section class="about" id="about">
-        <h1 class="heading">About Me</h1>
-        <div class="row">
-            <div class="info">
-                <h3 data-aos="slide-right"><span>Name:</span>Pradip Warkhade</h3>
-                <h3 data-aos="slide-left"><span>Graduation Year:</span>2021-2025</h3>
-                <h3 data-aos="slide-right"><span>Branch:</span>Information Technology</h3>
-                <h3 data-aos="slide-left"><span>Institue:</span>Sanjivani College of Engineering.</h3>
-                <h3 data-aos="slide-right"><span>Current Post:</span>Student</h3>
-                <a data-aos="flip-right"
-                    href="https://www.linkedin.com/in/pradip292/"><button class="btn">Contact Me <i class="fas fa-download"></i></button></a>
+                <div class="skills__box">
+                    <div class="skills__group">
+                        <div class="skills__data">
+                            <i class='bx bxs-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">C/C++</h3>
+                                <span class="skills__level">Intermediate</span>
+                            </div>
+                        </div>
+        
+                        <div class="skills__data">
+                            <i class='bx bxs-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">Java</h3>
+                                <span class="skills__level">Advanced</span>
+                            </div>
+                        </div>
+        
+                        <div class="skills__data">
+                            <i class='bx bxs-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">Python</h3>
+                                <span class="skills__level">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills__group">
+                        <div class="skills__data">
+                            <i class='bx bxs-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">JavaScript</h3>
+                                <span class="skills__level">Intermediate</span>
+                            </div>
+                        </div>
+        
+                        <div class="skills__data">
+                            <i class='bx bxs-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">SQL</h3>
+                                <span class="skills__level">Advanced</span>
+                            </div>
+                        </div>
+        
+                        <div class="skills__data">
+                            <i class='bx bxs-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">PHP</h3>
+                                <span class="skills__level">Intermediate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-<!--             <div class="counter">
-                <div class="box" data-aos="slide-right" data-aos-duration="1000">
-                    <span>2 star</span>
-                    <h3>on Codechef</h3>
+        
+            <!-- Frameworks and Technologies -->
+            <div class="skills__content">
+                <h3 class="skills__title">Frameworks & Technologies</h3>
+        
+                <div class="skills__box">
+                    <div class="skills__group">
+                        <div class="skills__data">
+                            <i class='bx bxs-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">HTML5/CSS3</h3>
+                                <span class="skills__level">Advanced</span>
+                            </div>
+                        </div>
+        
+                        <div class="skills__data">
+                            <i class='bx bxs-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">React</h3>
+                                <span class="skills__level">Intermediate</span>
+                            </div>
+                        </div>
+        
+                        <div class="skills__data">
+                            <i class='bx bxs-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">Spring Boot</h3>
+                                <span class="skills__level">Beginner</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills__group">
+                        <div class="skills__data">
+                            <i class='bx bxs-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">Bootstrap</h3>
+                                <span class="skills__level">Intermediate</span>
+                            </div>
+                        </div>
+        
+                        <div class="skills__data">
+                            <i class='bx bxs-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">IoT</h3>
+                                <span class="skills__level">Advanced</span>
+                            </div>
+                        </div>
+        
+                        <div class="skills__data">
+                            <i class='bx bxs-badge-check'></i>
+                            <div>
+                                <h3 class="skills__name">Git/Github</h3>
+                                <span class="skills__level">Advanced</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="box" data-aos="zoom-in">
-                    <span>5+</span>
-                    <h3>Projects Completed</h3>
+            </div>
+        </section>
+        
+        
+
+        <!--=============== SERVICES ===============-->
+        <!-- <section class="services section">
+            <span class="section__subtitle">My Services</span>
+            <h2 class="section__title">What I Offer</h2>
+
+            <div class="services__container container grid">
+                <div class="services__card">
+                    <div class="serv">
+                        <h3 class="services__title">Web <br> Application</h3>
+
+                        <span class="services__button">
+                            See More <i class='bx bx-right-arrow services__icon'></i>
+                        </span>
+                    </div>
+
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">Web Application</h3>
+
+                            <p class="services__modal-description">
+                                I design and develop the consumer products with creative ability and
+                                hands-on approach which stisfies the customers' and markets' needs and trends.
+                            </p>
+
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        I develop the user interfaces.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Web Page design and development.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        I create the UX element interactions.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        I position your company brand.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Create modern 3-D experiences.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <!-- <div class="box" data-aos="slide-left">
-                    <span>4 star</span>
-                    <h3>on Hackerrank</h3>
-                </div>
-                <div class="box" data-aos="slide-right">
-                    <span>2 star</span>
-                    <h3>on Leetcode</h3>
+
+                 <div class="services__card">
+                    <h3 class="services__title">UI/UX <br> Designing</h3>
+
+                    <span class="services__button">
+                        See More <i class='bx bx-right-arrow services__icon'></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">UI/UX Designing</h3>
+
+                            <p class="services__modal-description">
+                                I design and develop the consumer products with creative ability and
+                                hands-on approach which stisfies the customers' and markets' needs and trends.
+                            </p>
+
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        I develop the user interfaces.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Web Page design and development.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        I create the UX element interactions.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        I position your company brand.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Create modern 3-D experiences.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div> 
-                <div class="box" data-aos="slide-left">
-                    <span>5+</span>
-                    <h3>Certificates</h3>
+
+                <div class="services__card">
+                    <h3 class="services__title">Dynamic <br>Websites for Business </h3>
+
+                    <span class="services__button">
+                        See More <i class='bx bx-right-arrow services__icon'></i>
+                    </span>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title">Visual Designing</h3>
+
+                            <p class="services__modal-description">
+                                I design and develop the consumer products with creative ability and
+                                hands-on approach which stisfies the customers' and markets' needs and trends.
+                            </p>
+
+                            <ul class="services__modal-list">
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        I develop the user interfaces.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Web Page design and development.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        I create the UX element interactions.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        I position your company brand.
+                                    </p>
+                                </li>
+
+                                <li class="services__modal-item">
+                                    <i class='bx bx-check-circle'></i>
+                                    <p class="services__modal-info">
+                                        Create modern 3-D experiences.
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
- 
-        </div>
-    </section> -->
-    <!-- about section end -->
+        </section> -->
 
-    <!-- education section starts -->
-    <section class="education" id="education">
-        <h1 class="heading">My Education</h1>
-        <div class="box-container">
-            <div class="box" data-aos="slide-right">
-                <i class="fas fa-graduation-cap"></i>
-                <span>2019</span>
-                <h3>Passed High School</h3>
-                <h4>Marks Obtained: 91.60%</h4>
-                <h4>Year:2019</h4>
-                <h4>School: Shree S.B.High School, Ranjani</h4>
-            </div>
-            <div class="box" data-aos="slide-left">
-                <i class="fas fa-graduation-cap"></i>
-                <span>2019-2021</span>
-                <h3>Passed Higher Secondary School</h3>
-                <h4>Marks Obtained:89%</h4>
-                <h4>Year:2021</h4>
-                <h4>Institue: Badrinarayan Barwale Junior College, Jalna.</h4>
-            </div>
-            <div class="box" data-aos="slide-right">
-                <i class="fas fa-graduation-cap"></i>
-                <span>2021-Current</span>
-                <h3>Undergraduate Degree</h3>
-                <h4>Marks Obtained:8.7 CGPA</h4>
-                <h4>Year:2025</h4>
-                <h4>Institue: Sanjivani College of Engineering, Kopargaon</h4>
-            </div>
-<!--             <div class="box" data-aos="slide-left">
-                <i class="fas fa-graduation-cap"></i>
-                <span>2021-2025</span>
-                <h3>Certifications</h3>
-                <h4>* NPTEL Certifications</h4>
-                <h4>* IBM Skillsets</h4>
-                <h4>* Coursera Certificates</h4>
+        <!--=============== WORK ===============-->
+        <section class="work section" id="work">
+            <span class="section__subtitle">My Portfolio</span>
+            <h2 class="section__title">Recent Projects</h2>
+        
+            <!-- <div class="work__filters">
+                <span class="work__item active-work" data-filter='all'>All</span>
+                <span class="work__item" data-filter='.web'>Web Application</span>
+                <span class="work__item" data-filter='.movil'>Websites</span>
             </div> -->
-        </div>
-    </section>
-    <!-- education section ends -->
-<!--     <!-- skills section strats -->
-<!--     <section class="skills" id="skills">
-        <h1 class="heading">My Skills</h1>
-        <div class="row">
-            <div class="progress">
-                <h3> HTML & CSS <span>80%</span> </h3>
-                <div class="bar html"><span class="anim reveal"></span></div>
-                <h3> C/C++ <span>90%</span> </h3>
-                <div class="bar cpp"><span class="anim reveal"></span></div>
-                <h3> Python <span>70%</span> </h3>
-                <div class="bar python"><span class="anim reveal"></span></div>
-                <h3> SQL <span>80%</span> </h3>
-                <div class="bar sqli"><span class="anim reveal"></span></div>
-                <h3> Laravel (PHP) <span>50%</span> </h3>
-                <div class="bar php"><span class="anim reveal"></span></div>
-            </div>
-            <div class="progress">
-                <h3> Data Structure <span>70%</span> </h3>
-                <div class="bar dsa"><span class="anim reveal"></span></div>
-                <h3> javascript <span>60%</span> </h3>
-                <div class="bar angular"><span class="anim reveal"></span></div>
-                <h3> angular <span>25%</span> </h3>
-                <div class="bar javascript"><span class="anim reveal"></span></div>
-
-            </div>
-        </div>
-    </section> --> 
-    <!-- skills section ends -->
-    <!-- project section starts -->
-<!--     <section class="projects" id="projects">
-        <h1 class="heading">My Projects</h1>
-        <div class="box-container" data-aos="zoom-in-down">
-            <a class="box" href="project1.html" target="_blank">
-                <h4>Project 1</h4>
-                <h5>updating....</h5>
-            </a>
-            <a class="box" href="" target="_blank">
-                <h4>Project 2</h4>
-                <h5>updating....</h5>
-            </a>
-            <a class="box" href="" target="_blank">
-                <h4>Project 3</h4>
-                <h5>updating....</h5>
-            </a>
-            <a class="box" href="" target="_blank">
-                <h4>Project 4</h4>
-                <h5>updating....</h5>
-            </a>
-            <a class="box" href="" target="_blank">
-                <h4>Project 5</h4>
-                <h5>updating....</h5>
-            </a>
-            <a class="box" href="#">
-                <h4>updating....</h4>
-            </a>
-        </div>
-    </section> -->
-    <!-- my project section ends -->
-    <!-- contacts section starts -->
-    <section class="contacts" id="contacts">
-        <h1 class="heading">Contact Me</h1>
-        <div class="row">
-
-            <div class="content" data-aos="slide-right">
-
-                <h3 class="title">contact info</h3>
-
-                <div class="info">
-                    <h3> <i class="fas fa-envelope"></i> pradipwarkhade74@gmail.com</h3>
-                    <h3><i class="fas fa-phone"></i>+919096377648</h3>
-                    <h3><i class="fas fa-map-marker-alt"></i> Sai City, Kopargaon-423601 </h3>
+        
+            <div class="work__container container grid">
+                <div class="work__card mix web">
+                    <img src="assets/img/kkc.jpg" alt="" class="work__img">
+                    <h3 class="work__title">E-Learning Management System - <br> EduPulse (Kale Coaching Classes)</h3>
+                    <a href="https://github.com/pradip292/Dynamic_website_for_coaching_classes" class="work__button">
+                        Demo(private) <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+                <div class="work__card mix web">
+                    <img src="assets/img/chatbot.jpeg" alt="" class="work__img">
+                    <h3 class="work__title">Student Assistance Chatbot for<br>DTE, Rajasthan</h3>
+                    <a href="https://github.com/pradip292/Student-Assistant-Chatbot" class="work__button">
+                        Demo(private) <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+        
+                <div class="work__card mix web">
+                    <img src="assets/img/stich.jpeg" alt="" class="work__img">
+                    <h3 class="work__title">Real-Time Image Stitching System for<br> Seamless Panorama Creation</h3>
+                    <a href="https://www.linkedin.com/in/pradip292/" class="work__button">
+                        Demo(private) <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+        
+                <div class="work__card mix web">
+                    <img src="assets/img/gas.jpeg" alt="" class="work__img">
+                    <h3 class="work__title">Advanced Real-Time Monitoring Device <br> for Hazardous Gas Detection</h3>
+                    <a href="https://www.linkedin.com/in/pradip292" class="work__button">
+                        Demo(private) <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
+                </div>
+        
+                <div class="work__card mix web">
+                    <img src="assets/img/work3.jpg" alt="" class="work__img">
+                    <h3 class="work__title">Student College Feedback System <br>(SCOE, Kopargaon)</h3>
+                    <a href="https://www.linkedin.com/in/pradip292" class="work__button">
+                        Demo(private) <i class='bx bx-right-arrow work__icon'></i>
+                    </a>
                 </div>
             </div>
+        </section>
+        
 
-            <form method="">
-                <input type="text" placeholder="name" id="sendername" class="box">
-                <input type="email" placeholder="email" id="reply_to" class="box">
-                <input type="phone" placeholder="Phone" id="phone" class="box">
-                <input type="text" placeholder="subject" id="subject" class="box">
-                <textarea id="message" cols="30" rows="8" class="box message" placeholder="message"></textarea>
-                <button type="submit" class="btn" onclick="sendMail();"> send <i class="fas fa-paper-plane"></i></button>
-            </form>
-            <script>
-                function sendMail() {
-                        (function () {
-                            emailjs.init("dpqz6N77kqk8R0-9h"); // Account Public Key 
-                        })();
-                        var params = {
-                            sendername: document.querySelector("#sendername").value, 
-                            //to: document.querySelector("#to").value,
-                            phone: document.querySelector("#phone").value,
-                            subject: document.querySelector("#subject").value,
-                            replyto: document.querySelector("#reply_to").value,
-                            message: document.querySelector("#message").value,};
-                            var serviceID = "service_zv9t7mi"; // Email Service ID
-                            var templateID = "template_wry0v7l"; // Email Template ID
-                            
-                            emailjs.send(serviceID, templateID, params)
-                                .then(res =>{
-                                    alert("Email Send Successfully !")
-                                })
-                                .catch("Error !");
-                        }
-            </script>
+        <!--=============== TESTIMONIALS ===============-->
+        <section class="testimonial section">
+            <span class="section__subtitle">What people recommend</span>
+            <h2 class="section__title">Recommendations</h2>
+
+            <div class="testimonial__container container swiper">
+                <div class="swiper-wrapper">
+                    <div class="testimonial__card swiper-slide">
+                        <img src="assets/img/suyog.jpg" alt="" class="testimonial__img">
+
+                        <h3 class="testimonial__name">Suyog Dighe</h3>
+                        <p class="testimonial__description">
+                            A really good job, all aspects of the project were done well.
+                            Very creative and thoughtful. I was very impressed and would recommend this to anyone.
+                        </p>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+                        <img src="assets/img/sir.jpeg" alt="" class="testimonial__img">
+
+                        <h3 class="testimonial__name">Umesh B Sangule</h3>
+                        <p class="testimonial__description">
+                            Impressive work, covering all aspects flawlessly. Creativity and attention to detail were outstanding. Highly recommended.
+                        </p>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+                        <img src="assets/img/profile2.jpg" alt="" class="testimonial__img">
+
+                        <h3 class="testimonial__name"></h3>
+                        <p class="testimonial__description">
+                            Exceptional job, demonstrating creativity and meticulousness. Highly impressed.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+
+        <!--=============== CONTACT ===============-->
+        <section class="contact section" id="contact">
+            <sapn class="section__subtitle">Get in touch</sapn>
+            <h3 class="section__title">Contact Me</h3>
+
+            <div class="contact__container container grid">
+                <div class="contact__content">
+                    <h3 class="contact__title contact__title-info">Talk to me</h3>
+
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class='bx bx-mail-send contact__card-icon'></i>
+                            <h3 class="contact__card-title">Email</h3>
+                            <span class="contact__card-data">pradipwarkhade74@gmail.com</span>
+
+                            <a href="mailto:pradipwarkhade74@gmail.com" target="_blank" class="contact__button">
+                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class='bx bxl-whatsapp contact__card-icon'></i>
+                            <h3 class="contact__card-title">Whatsapp</h3>
+                            <span class="contact__card-data">9096377648</span>
+
+                            <a href="https://api.whatsapp.com/send?phone=+919096377648&text=Hi Pradip,Nice to connect with you !" target="_blank"
+                                class="contact__button">
+                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class='bx bxl-twitter contact__card-icon'></i>
+                            <h3 class="contact__card-title">Twitter</h3>
+                            <span class="contact__card-data">PradipWarkhade7</span>
+
+                            <a href="https://x.com/PradipWarkhade7" target="_blank" class="contact__button">
+                                Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__content">
+                    <h3 class="contact__title contact__title-form">Write Me your Message</h3>
+
+                    <form action="" class="contact__form">
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">Name</label>
+                            <input type="text" placeholder="Enter name" id="sendername" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">Mail</label>
+                            <input type="text" placeholder="Enter email" id="reply_to" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div contact__form-area">
+                            <label for="" class="contact__form-tag">Message</label>
+                            <textarea name="" id="" cols="30" rows="10" id="message" placeholder="Write your Message"
+                                class="contact__form-input "></textarea>
+                        </div>
+
+
+                        <button class="button">
+                            Send Message
+                        </button>
+                    </form>
+                    <script>
+                        function sendMail() {
+                                (function () {
+                                    emailjs.init("dpqz6N77kqk8R0-9h"); // Account Public Key 
+                                })();
+                                var params = {
+                                    sendername: document.querySelector("#sendername").value, 
+                                    //to: document.querySelector("#to").value,
+                                    //phone: document.querySelector("#phone").value,
+                                    //subject: document.querySelector("#subject").value,
+                                    replyto: document.querySelector("#reply_to").value,
+                                    message: document.querySelector("#message").value,};
+                                    var serviceID = "service_zv9t7mi"; // Email Service ID
+                                    var templateID = "template_wry0v7l"; // Email Template ID
+                                    
+                                    emailjs.send(serviceID, templateID, params)
+                                        .then(res =>{
+                                            alert("Email Send Successfully !")
+                                        })
+                                        .catch("Error !");
+                                }
+                    </script>
+                </div>
+        </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <h1 class="footer__title">Pradip Warkhade</h1>
+
+            <ul class="footer__list">
+
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Home</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#about" class="footer__link">About</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#skills" class="footer__link">Skills</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#work" class="footer__link">Projects</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#contact" class="footer__link">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="footer__social">
+                <li class="footer__social-item">
+                    <a href="https://www.instagram.com/pradip_warkhade_patil/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-facebook footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://x.com/PradipWarkhade7" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-twitter footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://www.linkedin.com/in/pradip292" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-linkedin footer__social-icon'></i>
+                    </a>
+                </li>
+                <li class="footer__social-item">
+                    <a href="https://www.instagram.com/pradip_warkhade_patil/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-instagram footer__social-icon'></i>
+                    </a>
+                </li>
+            </ul>
+
+            <span class="footer__copy">
+                 2024. All rights reserved.
+            </span>
         </div>
+    </footer>
 
-    </section>
-    <!-- contacts section ends -->
-    <a href="#home">
-        <img class="top" src="https://cdn3.iconfinder.com/data/icons/common-4/24/ui-22-1024.png" alt="">
-    </a>
+    <!--=============== SCROLLREVEAL ===============-->
 
-<!--     <div class="credits">Copyright<span> Pradip Warkhade</span> | all rights reserved |2022. </div> -->
+    <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!--=============== SWIPER JS ===============-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
 
-    <script src="script.js"></script>
+    <!--=============== MIXITUP FILTER ===============-->
+    <script src="assets/js/mixitup.min.js"></script>
 
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
