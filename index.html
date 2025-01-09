@@ -15,6 +15,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
     <meta name="theme-color" content="#a789d4">
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 
     <!--=============== BOXICONS ===============-->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
@@ -27,28 +29,7 @@
 
     <title>Pradip's Portfolio</title>
 </head>
-<script>
-    function sendMail() {
-            (function () {
-                emailjs.init("dpqz6N77kqk8R0-9h"); // Account Public Key 
-            })();
-            var params = {
-                sendername: document.querySelector("#sendername").value, 
-                //to: document.querySelector("#to").value,
-                //phone: document.querySelector("#phone").value,
-                //subject: document.querySelector("#subject").value,
-                replyto: document.querySelector("#reply_to").value,
-                message: document.querySelector("#message").value,};
-                var serviceID = "service_zv9t7mi"; // Email Service ID
-                var templateID = "template_wry0v7l"; // Email Template ID
-                
-                emailjs.send(serviceID, templateID, params)
-                    .then(res =>{
-                        alert("Email Send Successfully !")
-                    })
-                    .catch("Error !");
-            }
-</script>
+
 
 <!-- <body> -->
     <!-- =============== HEADER =============== -->
@@ -645,31 +626,36 @@
                                 class="contact__form-input "></textarea>
                         </div>
 
-                        <button type="submit" onclick="sendMail()" class="button">
+                        <button type="submit" onclick="sendMail(event)" class="button">
                             Send Message
                         </button>
                     </form>
                     <script>
-                        function sendMail() {
-                                (function () {
-                                    emailjs.init("dpqz6N77kqk8R0-9h"); // Account Public Key 
-                                })();
-                                var params = {
-                                    sendername: document.querySelector("#sendername").value, 
-                                    //to: document.querySelector("#to").value,
-                                    //phone: document.querySelector("#phone").value,
-                                    //subject: document.querySelector("#subject").value,
-                                    replyto: document.querySelector("#reply_to").value,
-                                    message: document.querySelector("#message").value,};
-                                    var serviceID = "service_zv9t7mi"; // Email Service ID
-                                    var templateID = "template_wry0v7l"; // Email Template ID
-                                    
-                                    emailjs.send(serviceID, templateID, params)
-                                        .then(res =>{
-                                            alert("Email Send Successfully !")
-                                        })
-                                        .catch("Error !");
-                                }
+                        function sendMail(event) {
+                        event.preventDefault(); // Prevent the form from submitting
+
+                        (function () {
+                            emailjs.init("dpqz6N77kqk8R0-9h"); // Account Public Key 
+                        })();
+
+                        var params = {
+                            sendername: document.querySelector("#sendername").value, 
+                            replyto: document.querySelector("#reply_to").value,
+                            message: document.querySelector("#message").value,
+                        };
+                        
+                        var serviceID = "service_zv9t7mi"; // Email Service ID
+                        var templateID = "template_wry0v7l"; // Email Template ID
+                        
+                        emailjs.send(serviceID, templateID, params)
+                            .then(res => {
+                                alert("Email Sent Successfully!");
+                            })
+                            .catch(err => {
+                                alert("Error sending email!");
+                                console.error(err);
+                            });
+                    }
                     </script>
                 </div>
         </section>
