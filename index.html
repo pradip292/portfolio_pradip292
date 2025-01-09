@@ -609,7 +609,7 @@
                 <div class="contact__content">
                     <h3 class="contact__title contact__title-form">Write Me your Message</h3>
 
-                    <form action="" class="contact__form">
+                    <form action="" class="contact__form" method="">
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">Name</label>
                             <input type="text" placeholder="Enter name" id="sendername" class="contact__form-input">
@@ -622,11 +622,11 @@
 
                         <div class="contact__form-div contact__form-area">
                             <label for="" class="contact__form-tag">Message</label>
-                            <textarea name="" id="" cols="30" rows="10" id="message" placeholder="Write your Message"
+                            <textarea name="message" id="" cols="30" rows="10" id="message" placeholder="Write your Message"
                                 class="contact__form-input "></textarea>
                         </div>
 
-                        <button type="submit" onclick="sendMail()" class="button">
+                        <button type="submit" onclick="sendMail();" class="button">
                             Send Message
                         </button>
                     </form>
@@ -639,8 +639,8 @@
                                 var params = {
                                     sendername: document.querySelector("#sendername").value, 
                                     //to: document.querySelector("#to").value,
-                                    phone: document.querySelector("#phone").value,
-                                    subject: document.querySelector("#subject").value,
+                                    //phone: document.querySelector("#phone").value,
+                                    //subject: document.querySelector("#subject").value,
                                     replyto: document.querySelector("#reply_to").value,
                                     message: document.querySelector("#message").value,};
                                     var serviceID = "service_zv9t7mi"; // Email Service ID
